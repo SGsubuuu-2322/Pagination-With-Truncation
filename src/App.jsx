@@ -21,12 +21,19 @@ function App() {
   // fetchProducts();
   return (
     <>
-      <div className="p-0 m-5 grid gap-5 grid-cols-3 w-full h-screen list-none">
+      <div className="p-5 grid gap-5 grid-cols-3 w-full h-screen list-none">
         {products.length > 0 &&
           products.map((prod) => {
             return (
-              <span className="border-2 border-black rounded" key={prod.id}>
-                <img src={prod.thumbnail} alt={prod.title} />
+              <span
+                className="border-2 border-black rounded p-5 bg-[rgb(220, 220, 220)] text-center cursor-pointer flex flex-col items-center justify-center"
+                key={prod.id}
+              >
+                <img
+                  className="h-60 w-60 custom-shadow"
+                  src={prod.thumbnail}
+                  alt={prod.title}
+                />
                 <span>{prod.title}</span>
               </span>
             );
