@@ -5,3 +5,20 @@
 .custom-shadow {
   filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.5));
 }
+
+.pagination > span {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination > span:hover {
+  transform: scale(1.25);
+}
+.pagination > span:active {
+  /* transform: scale(1.2); */
+  background-color: deepskyblue;
+}
