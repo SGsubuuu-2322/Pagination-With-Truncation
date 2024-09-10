@@ -50,7 +50,7 @@ function App() {
         {products.length > 0 && (
           <div className="pagination w-full py-5 flex justify-center items-center">
             <span
-              className="buttons"
+              className={page > 1 ? "cursor-pointer" : "cursor-not-allowed"}
               onClick={() => selectPageHandler(page - 1)}
             >
               ◀️
@@ -59,7 +59,7 @@ function App() {
               return (
                 <span
                   key={i}
-                  className={`${
+                  className={`cursor-pointer ${
                     page === i + 1
                       ? "underline font-bold scale-125 bg-slate-200"
                       : ""
@@ -71,7 +71,11 @@ function App() {
               );
             })}
             <span
-              className="buttons"
+              className={
+                page < products.length / 10
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed"
+              }
               onClick={() => selectPageHandler(page + 1)}
             >
               ▶️
